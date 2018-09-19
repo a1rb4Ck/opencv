@@ -204,6 +204,11 @@ void FileStorage::write( const String& name, const std::vector<String>& val )
     *this << name << val;
 }
 
+void FileStorage::write( const String& name, const std::vector<int>& val )
+{
+    *this << name << val;
+}
+
 void FileStorage::writeComment( const String& comment, bool append )
 {
     cvWriteComment(fs, comment.c_str(), append ? 1 : 0);
